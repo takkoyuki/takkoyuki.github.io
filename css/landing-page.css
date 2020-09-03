@@ -34,7 +34,7 @@ header.masthead .overlay {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 header.masthead h1 {
@@ -47,6 +47,39 @@ header.masthead h1 {
     padding-bottom: 10.5rem;
   }
   header.masthead h1 {
+    font-size: 2rem;
+  }
+}
+
+header.aboutmasthead {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/aurora2.jpg") no-repeat center bottom;
+  background-size: cover;
+  padding-top: 2.5rem;
+  padding-bottom: 10rem;
+}
+
+header.aboutmasthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+header.aboutmasthead h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  header.aboutmasthead {
+    padding-top: 2rem;
+    padding-bottom: 10.5rem;
+  }
+  header.aboutmasthead h1 {
     font-size: 2rem;
   }
 }
