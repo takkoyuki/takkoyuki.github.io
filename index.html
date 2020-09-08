@@ -5,8 +5,8 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="当サイト買い物ノルウェーは、ノルウェーでしか買えない商品を代わりに購入し、指定の住所へ発送する買い物代行について問い合わせできるサイトです。">
+  <meta name="author" content="著者ゆき">
 
   <title>Kaimono Norway - Home</title>
   
@@ -79,16 +79,25 @@
                     <input type="text" class="form-control" id="urlFormControlInput" placeholder="https://site.com/kaitai-mono">
                   </div>
                   <div class="form-group">
+                    <label for="buy_type">代行タイプをお選びください</label>
+                  <select class="form-control" name="buy_type">
+                    <option value="buy_at_store"selected>店舗での購入代行</option>
+                    <option value="buy_on_line" >オンラインでの購入代行</option>
+                    <option value="buy_self">受取りと発送のみ</option>
+
+                    </select>
+                  </div>
+                  <div class="form-group">
                     <label for="exampleFormControlTextarea1">内容</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
-                  <div>
-                    <input type="radio" name="check" value="yes">検品あり(+3,000円)
-                    <input type="radio" name="check" value="no">検品不要
-                  </div><br>
-                  <div>
-                    <input type="radio" name="ask" value="yes">店への問い合わせ・交渉あり(+2,000円)
-                    <input type="radio" name="ask" value="no">不要
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check1">
+                    <label class="form-check-label" for="check1">店への問い合わせ/交渉あり</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check2">
+                    <label class="form-check-label" for="check2">検品あり</label>
                   </div>
                   <br>
                   <button type="submit" class="btn btn-primary">見積もり依頼</button>
@@ -157,7 +166,7 @@
         </div>
       </div>
       <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/dish2.jpg');"></div>
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/dish3.jpg');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
           <h2>北欧食器・雑貨</h2>
           <p class="lead mb-0">iittala、ARABIA、figgjo、Gustavsberg、marimekko…挙げたらきりがないほどの素敵な北欧食器たち。ノルウェーでなら、アンティーク品もビンテージ品も見つかる可能性大です。</p>
