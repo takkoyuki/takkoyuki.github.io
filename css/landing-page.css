@@ -21,10 +21,10 @@ h6 {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../img/moose2.jpg") no-repeat center bottom;
+  background: url("../img/moose4.JPG") no-repeat center bottom;
   background-size: cover;
   padding-top: 2.5rem;
-  padding-bottom: 10rem;
+  padding-bottom: 13rem;
 }
 
 header.masthead .overlay {
@@ -34,7 +34,7 @@ header.masthead .overlay {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 header.masthead h1 {
@@ -140,7 +140,7 @@ header.aboutmasthead h1 {
 .call-to-action {
   position: relative;
   background-color: #343a40;
-  background: url("../img/moose.jpg") no-repeat center center;
+  background: url("../img/moose4.JPG") no-repeat center center;
   background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem;

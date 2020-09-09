@@ -1,10 +1,10 @@
 header.masthead {
   position: relative;
   background-color: $gray-800;
-  background: url('../img/moose2.jpg') no-repeat center bottom;
+  background: url('../img/moose4.JPG') no-repeat center bottom;
   @include background-cover;
   padding-top: 2.5rem;
-  padding-bottom: 10rem;
+  padding-bottom: 13rem;
   .overlay {
     position: absolute;
     background-color: $gray-900;
@@ -12,7 +12,7 @@ header.masthead {
     width: 100%;
     top: 0;
     left: 0;
-    opacity: 0.4;
+    opacity: 0.3;
   }
   h1 {
     font-size: 2rem;
