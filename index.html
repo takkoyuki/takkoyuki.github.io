@@ -62,10 +62,9 @@
           <p>ノルウェー最安値の購入代行。<br>個人輸入・店舗経営・バイヤーどなたでもご利用可！</p>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mx-auto">
-                <form>
+                <form method="post" action="http://127.0.0.1:5000">
                   <div class="form-group">
                     <label for="emailFormControlInput">Email</label>
                     <input type="email" class="form-control" id="emailFormControlInput" placeholder="name@example.com">
@@ -80,10 +79,10 @@
                   </div>
                   <div class="form-group">
                     <label for="buy_type">代行タイプをお選びください</label>
-                  <select class="form-control" name="buy_type">
-                    <option value="buy_at_store"selected>店舗での購入代行</option>
-                    <option value="buy_on_line" >オンラインでの購入代行</option>
-                    <option value="buy_self">受取りと発送のみ</option>
+                  <select class="form-control" id="buy_type">
+                    <option selected>店舗での購入代行</option>
+                    <option>オンラインでの購入代行</option>
+                    <option>受取りと発送のみ</option>
 
                     </select>
                   </div>
@@ -100,11 +99,10 @@
                     <label class="form-check-label" for="check2">検品あり</label>
                   </div>
                   <br>
-                  <button type="submit" class="btn btn-primary">見積もり依頼</button>
+                  <input type="submit" value="見積もり依頼" class="btn btn-primary"></input>
                 </form>
               </div>
             </div>
-          </form>
           <p>お見積りは24時間以内に記入いただいたメールアドレスへお送りします。24時間経っても確認メールや見積もりが届かない場合は、メールアドレスが間違っているもしくはフォルダのゴミ箱に移動している等の可能性があります。再度依頼をご送信くださいませ。</p>
         </div>
       </div>
