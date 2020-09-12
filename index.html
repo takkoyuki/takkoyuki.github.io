@@ -67,19 +67,19 @@
                 <form method="post" action="http://127.0.0.1:5000">
                   <div class="form-group">
                     <label for="emailFormControlInput">Email</label>
-                    <input type="email" class="form-control" id="emailFormControlInput" placeholder="name@example.com">
+                    <input type="email" name="email" class="form-control" id="emailFormControlInput" placeholder="name@example.com">
                   </div>
                   <div class="form-group">
                     <label for="nameFormControlInput">氏名</label>
-                    <input type="text" class="form-control" id="nameFormControlInput" placeholder="氏名">
+                    <input type="text" name="name" class="form-control" id="nameFormControlInput" placeholder="氏名">
                   </div>
                   <div class="form-group">
                     <label for="urlFormControlInput">購入商品のWEBページのURL</label>
-                    <input type="text" class="form-control" id="urlFormControlInput" placeholder="https://site.com/kaitai-mono">
+                    <input type="text" name="url" class="form-control" id="urlFormControlInput" placeholder="https://site.com/kaitai-mono">
                   </div>
                   <div class="form-group">
                     <label for="buy_type">代行タイプをお選びください</label>
-                  <select class="form-control" id="buy_type">
+                  <select name="buy_type" class="form-control" id="buy_type">
                     <option selected>店舗での購入代行</option>
                     <option>オンラインでの購入代行</option>
                     <option>受取りと発送のみ</option>
@@ -88,18 +88,18 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlTextarea1">内容</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="check1">
-                    <label class="form-check-label" for="check1">店への問い合わせ/交渉あり</label>
+                    <input name="negotiate" type="checkbox" class="form-check-input" id="negotiate">
+                    <label class="form-check-label" for="negotiate">店への問い合わせ/交渉あり</label>
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="check2">
-                    <label class="form-check-label" for="check2">検品あり</label>
+                    <input name="damagecheck" type="checkbox" class="form-check-input" id="damagecheck">
+                    <label class="form-check-label" for="damagecheck">検品あり</label>
                   </div>
                   <br>
-                  <input type="submit" value="見積もり依頼" class="btn btn-primary"></input>
+                  <button type="submit" class="btn btn-primary">見積もり依頼</button>
                 </form>
               </div>
             </div>
