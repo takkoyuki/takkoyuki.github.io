@@ -2,7 +2,27 @@
 <html lang="ja">
 
 <head>
-  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LeSQ9UZAAAAACd-qsyQNkYkvoM-asOz0-HFnkBl"></script>
+  <script>
+    function onClick() {
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LeSQ9UZAAAAACd-qsyQNkYkvoM-asOz0-HFnkBl', {action: 'submit'}).then(function(token) {
+          const data = new URLSearchParams();
+          let formElement = document.getElementById("order-form");
+          for (const pair of new FormData(formElement)) {
+            data.append(pair[0], pair[1]);
+          }
+          data.append("token", token);
+
+          fetch('http://35.196.181.29', {
+            method: 'post',
+            body: data,
+          }).then(res => alert("Sent order"));
+        });
+      });
+    }
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="当サイト買い物ノルウェーは、ノルウェーでしか買えない商品を代わりに購入し、指定の住所へ発送する買い物代行について問い合わせできるサイトです。">
@@ -64,8 +84,7 @@
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mx-auto">
-                <!-- I know this isnt very good security, its mainly for stopping crawlers etc... Please dont do something nasty.-->
-                <form method="post" action="http://finn:finn@35.196.181.29">
+                <form id="order-form">
                   <div class="form-group">
                     <label for="emailFormControlInput">Email</label>
                     <input type="email" name="email" class="form-control" id="emailFormControlInput" placeholder="name@example.com">
@@ -100,7 +119,7 @@
                     <label class="form-check-label" for="damagecheck">検品あり</label>
                   </div>
                   <br>
-                  <button type="submit" class="btn btn-primary g-recaptcha" data-sitekey="6LeSQ9UZAAAAACd-qsyQNkYkvoM-asOz0-HFnkBl" data-callback="onSubmit">見積もり依頼</button>
+                  <button onclick="onClick()" class="btn btn-primary">見積もり依頼</button>
                 </form>
               </div>
             </div>
