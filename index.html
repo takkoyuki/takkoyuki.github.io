@@ -17,8 +17,11 @@
           fetch('http://35.196.181.29', {
             method: 'post',
             body: data,
+            mode: 'no-cors',
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-          }).then(res => alert("Sent order"));
+          }).then(res => {
+            formElement.reset()
+          });
         });
       });
     }
@@ -85,7 +88,7 @@
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mx-auto">
-                <form id="order-form">
+                <form id="order-form" action="javascript:void(0);">
                   <div class="form-group">
                     <label for="emailFormControlInput">Email</label>
                     <input type="email" name="email" class="form-control" id="emailFormControlInput" placeholder="name@example.com">
