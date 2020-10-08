@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /messagesent.html
+Sitemap: sitemap.xml
