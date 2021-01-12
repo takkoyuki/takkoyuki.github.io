@@ -19,7 +19,9 @@
             body: data,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
           }).then(res => {
-            formElement.reset()
+            window.location.href = 'https://www.kaimono-norway.com/messagesent.html';
+          }).catch(err => {
+            //
           });
         });
       });
@@ -53,7 +55,7 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-light navbar-expand-lg bg-light static-top">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <img src="img/title.png" 
         alt="kaimononorway" 
         title="kaimononorway" 
