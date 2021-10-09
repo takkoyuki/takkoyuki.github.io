@@ -4,10 +4,16 @@
 <script async src="https://www.google.com/recaptcha/api.js?render=6LeSQ9UZAAAAACd-qsyQNkYkvoM-asOz0-HFnkBl"></script>
 <script>
 function onClick() {
+let formElement = document.getElementById("order-form");
+if (!formElement.checkValidity()) {
+for (let elem of formElement.getElementsByTagName("input")) {
+elem.reportValidity();
+}
+return;
+}
 grecaptcha.ready(function() {
 grecaptcha.execute('6LeSQ9UZAAAAACd-qsyQNkYkvoM-asOz0-HFnkBl', {action: 'submit'}).then(function(token) {
 const data = new URLSearchParams();
-let formElement = document.getElementById("order-form");
 for (const pair of new FormData(formElement)) {
 data.append(pair[0], pair[1]);
 }
@@ -88,15 +94,15 @@ window.location.href = 'https://www.kaimono-norway.com/messagesent.html';
 <form id="order-form" action="javascript:void(0);">
 <div class="form-group">
 <label for="emailFormControlInput">Email</label>
-<input type="email" name="email" class="form-control" id="emailFormControlInput" placeholder="name@example.com">
+<input type="email" name="email" class="form-control" id="emailFormControlInput" placeholder="name@example.com" required="true">
 </div>
 <div class="form-group">
 <label for="nameFormControlInput">氏名</label>
-<input type="text" name="name" class="form-control" id="nameFormControlInput" placeholder="氏名">
+<input type="text" name="name" class="form-control" id="nameFormControlInput" placeholder="氏名" required="true">
 </div>
 <div class="form-group">
 <label for="urlFormControlInput">購入商品のWEBページのURL</label>
-<input type="text" name="url" class="form-control" id="urlFormControlInput" placeholder="https://site.com/kaitai-mono">
+<input type="text" name="url" class="form-control" id="urlFormControlInput" placeholder="https://site.com/kaitai-mono" required="true">
 </div>
 <div class="form-group">
 <label for="buy_type">代行タイプをお選びください</label>
@@ -104,7 +110,6 @@ window.location.href = 'https://www.kaimono-norway.com/messagesent.html';
 <option selected>店舗での購入代行</option>
 <option>オンラインでの購入代行</option>
 <option>受取りと発送のみ</option>
-
 </select>
 </div>
 <div class="form-group">
@@ -120,7 +125,7 @@ window.location.href = 'https://www.kaimono-norway.com/messagesent.html';
 <label class="form-check-label" for="damagecheck">検品あり</label>
 </div>
 <br>
-<button onclick="onClick()" class="btn btn-primary">見積もり依頼</button>
+<button type="button" onclick="onClick()" class="btn btn-primary">見積もり依頼</button>
 </form>
 </div>
 </div>
@@ -256,6 +261,25 @@ window.location.href = 'https://www.kaimono-norway.com/messagesent.html';
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+'use strict';
+window.addEventListener('load', function() {
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+var forms = document.getElementsByClassName('needs-validation');
+// Loop over them and prevent submission
+var validation = Array.prototype.filter.call(forms, function(form) {
+form.addEventListener('submit', function(event) {
+if (form.checkValidity() === false) {
+event.preventDefault();
+event.stopPropagation();
+}
+form.classList.add('was-validated');
+}, false);
+});
+}, false);
+})();
+</script>
 </body>
 </html>
