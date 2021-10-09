@@ -11,13 +11,10 @@
 
 
 <title>Kaimono Norway - Message Sent</title>
-
-<link rel="preload" href="vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="preload" as="style">
+<link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link rel="preload" as="script" href="vendor/bootstrap/bootstrap.bundle.min.js">
 <link rel="preload" href="vendor/fontawesome-free/css/all.min.css" as="style">
 <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" as="style">
-
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
@@ -27,10 +24,11 @@
 </head>
 <body>
 <nav class="navbar navbar-light navbar-expand-lg bg-light static-top">
+    <div class="container-fluid">
     <a class="navbar-brand" href="/">
         <img src="img/title_smaller.png" alt="kaimono-norway logo" title="title" height="50px">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -40,18 +38,18 @@
                 <a class="nav-link" href="/">Home </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.html">About us </a>
+                <a class="nav-link"  href="about.html">About us </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="prices.html">Prices</a>
             </li>
         </ul>
     </div>
+    </div>
 </nav>
 
 
 <header class="masthead text-white text-center">
-<div class="overlay"></div>
 <div class="container" style="min-height: 50vh; padding: 3em">
 <div class="row">
 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
@@ -89,7 +87,6 @@
     </div>
 </footer>
 
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>
