@@ -160,3 +160,25 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+.table-light-bg {
+  background-color: #fff;
+  color: #212529;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.table-light-bg th, .table-light-bg td {
+  background-color: #fff;
+  color: #212529;
+  border-top: 1px solid #dee2e6;
+}
+.table-light-bg thead th {
+  background-color: #f8f9fa;
+  color: #212529;
+  border-bottom: 2px solid #dee2e6;
+}
+.table-light-bg tbody tr:hover {
+  background-color: #f1f3f5;
+}
