@@ -182,3 +182,12 @@ footer.footer {
 .table-light-bg tbody tr:hover {
   background-color: #f1f3f5;
 }
+
+/* Custom link color: grey-white */
+a {
+  color: #e0e0e0;
+}
+a:hover, a:focus {
+  color: #bdbdbd;
+  text-decoration: underline;
+}
